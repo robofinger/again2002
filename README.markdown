@@ -1,4 +1,3 @@
-# Again2002 iPhone App Support Website
+# Again2002 Support Website
 
-This is the support website for the iPhone app Again2002
-by Calvin Lee.
+This is the support website for iPhone app, Again2002, by Calvin Lee.
