@@ -1,0 +1,17 @@
+<tr>
+   <td class="ad">
+      <span class="content"><%= ad.description %></span>
+      <span class="timestamp">
+         Posted <%= time_ago_in_words(ad.created_at) %> ago.
+      </span>
+   </td>
+   <% if current_user?(ad.user) %>
+   <td>
+      <%= link_to "delete", ad, :method => :delete,
+                                       :confirm => "You sure?",
+                                       :title => ad.description %>
+   </td>
+   <% end %>
+</tr>
+
+

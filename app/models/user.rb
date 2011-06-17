@@ -14,8 +14,8 @@ require 'digest'
 class User < ActiveRecord::Base
     attr_accessor :password
     attr_accessible :name, :email, :password, :password_confirmation
-
-    has_many :microposts, :dependent => :destroy
+    has_many :comments
+    has_many :ads, :dependent => :destroy
    
     email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   
@@ -52,7 +52,7 @@ class User < ActiveRecord::Base
 
     def feed
         # This is preliminary. See Chapter 12 for the full implementation.
-        Micropost.where("user_id = ?", id)
+        Ad.where("user_id = ?", id)
     end
 
     private

@@ -9,7 +9,7 @@ Factory.sequence :email do |n|
    "person-#{n}@example.com"
 end
 
-Factory.define :micropost do |micropost|
-   micropost.content "Foo bar"
-   micropost.association :user
+Factory.define :ad do |ad|
+   ad.description "Foo bar"
+   ad.association :user
 end

@@ -5,18 +5,20 @@
             <%= gravatar_for @user %>
             <%= @user.name %>
          </h1>
-
-         <% unless @user.microposts.empty? %>
-         <table class="microposts" summary="User microposts">
-            <%= render @microposts %>
+      
+         <h1>Ads</h1>
+         <% unless @user.ads.empty? %>
+         <table class="ads" summary="User ads">
+            <%= render :partial => "ads/ad",:collection => @user.ads %>
          </table>
-         <%= will_paginate @microposts %>
+         <%= will_paginate @ads %>
          <% end %>
+
       </td>
       <td class="sidebar round">
          <strong>Name</strong> <%= @user.name %><br />
-         <strong>URL</strong>  <%= link_to user_path(@user), @user %>
-         <strong>Microposts</strong> <%= @user.microposts.count %>
+         <strong>URL</strong>  <%= link_to user_path(@user), @user %><br>
+         <strong>Ads</strong> <%= @user.ads.count %>
       </td>
    </tr>
 </table>

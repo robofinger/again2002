@@ -1,0 +1,12 @@
+<h2>Create an ad:</h2>
+<%= form_for([@user, @user.ads.build]) do |f| %>
+
+   <div class="field">
+      <%= f.label :description %><br />
+      <%= f.text_field :description %>
+   </div>
+   
+   <div class="actions">
+      <%= f.submit %>
+   </div>
+<% end %>

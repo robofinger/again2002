@@ -220,6 +220,36 @@ table.microposts tr td.micropost span.timestamp {
   color: #666;
 }
 
+adh1.ad {
+  margin-bottom: 0.3em;
+}
+
+table.ads {
+  margin-top: 1em;
+}
+
+table.ads tr {
+  height: 70px;
+}
+
+table.ads tr td.gravatar {
+  border-top: 1px solid #ccc;
+  vertical-align: top;
+  width: 50px;
+}
+
+table.ads tr td.ad {
+  border-top: 1px solid #ccc;
+  vertical-align: top;
+  padding-top: 10px;
+}
+
+table.ads tr td.ad span.timestamp {
+  display: block;
+  font-size: 85%;
+  color: #666;
+}
+
 div.user_info img {
   padding-right: 0.1em;
 }
@@ -241,6 +271,19 @@ form.new_micropost {
 }
 
 form.new_micropost textarea {
+  height: 4em;
+  margin-bottom: 0;
+}
+
+div.user_info span.ads {
+  font-size: 80%;
+}
+
+form.new_ad {
+  margin-bottom: 2em;
+}
+
+form.new_ad textarea {
   height: 4em;
   margin-bottom: 0;
 }
